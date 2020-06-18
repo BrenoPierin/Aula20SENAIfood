@@ -2,11 +2,19 @@ namespace Aula20SENAIfood
 {
     public class Pedido
     {
-        public string Nome { get; set; }
-        public string EnderecoAtual { get; set; }
+       public string itens { get; set; }
+       public string Cliente { get; set; }
+       public string Restaurante { get; set; }
+       public string FormaDePGTO { get; set; }
+       public bool ProdutoPago = true;
 
-        public string MostrarDados(){
-            return $"{Nome}, seu pedido já pode ser feito para o endereço {EnderecoAtual}"
-        }
+       public string EntregarPedido(string itens, string FormaDePGTO){
+           if(ProdutoPago == true){
+                return $"{itens} sendo entregues, pagando com {FormaDePGTO}";
+           }
+           return "Não foi possivel entregar por falta de pagamento";
+       }
+
+       
     }
 }

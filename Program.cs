@@ -6,7 +6,17 @@ namespace Aula20SENAIfood
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+            Cliente sergin = new Cliente("sergin");
+            sergin.EnderecoAtual = "Brasilia,DF";
+            System.Console.WriteLine(sergin.MostrarDados());
+
+            Restaurante PeDeFava = new Restaurante("Pé de fava");
+            PeDeFava.Endereco = "São Paulo";
+            System.Console.WriteLine(PeDeFava.MostrarDados());
+
+            Pedido Fejuca = new Pedido();
+            System.Console.WriteLine(Fejuca.EntregarPedido("fejuca, farofa", "Crédito"));
         }
     }
 }
